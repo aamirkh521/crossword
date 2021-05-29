@@ -14,7 +14,6 @@ function initializeScreen(){
 				var txtID = String('txt' + '_' + i + '_' + j);
 				cell.innerHTML = '<input type="text" class="inputBox" maxlength="1" style="text-transform: lowercase" ' + 'id="' + txtID + '" onfocus="textInputFocus(' + "'" + txtID + "'"+ ')">';
 			}else{
-			//	cell.style.backgroundColor  = "black";
 				cell.classList.add("mystyle")
 			}
 		}
