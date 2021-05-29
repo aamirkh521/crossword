@@ -1,0 +1,55 @@
+#container {
+    background: url('images/Neon.png');
+    width: auto;
+    min-height: 500px;
+    
+}
+#leftPanel
+{
+   position: relative;
+   width: 50%;
+}
+#leftPanel #gameLevel {
+    
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+     
+}
+#gameLevel h3{
+    position: absolute;
+    top: 0px;
+    text-align: center;
+    left: 40px;
+    color: #fff;
+}
+#leftPanel #gameScreen {
+    
+    position: absolute;
+    top: 50px;
+    left: 40px;
+ 
+}
+.clue-text{
+    color: #19B4A9;
+    position: absolute;
+    bottom: 150px;
+    left: 40px;
+}
+ 
+#actionPanel{
+    color: #000000;
+    position: absolute;
+    bottom: 60px;
+    left: 40px;
+    width: 100%;
+}
+.actionButton{
+    width: 35%;
+    float: left;
+}
+.actionGiveup{
+    float: left;
+    margin: 30px 50px;
+}
