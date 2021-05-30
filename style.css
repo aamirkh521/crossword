@@ -46,10 +46,18 @@
     width: 100%;
 }
 .actionButton{
-    width: 35%;
+    /* width: 35%; */
+    width: 58%;
     float: left;
 }
 .actionGiveup{
     float: left;
     margin: 30px 50px;
+}
+
+#heading7{
+    position: absolute;
+    top: 63px;
+    left: 92px;
+    font-weight: bold;
 }
