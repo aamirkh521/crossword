@@ -3,7 +3,20 @@ var currentTextInput;
 var puzzelArrayData;
 var numberOfActionButtons = 7
 const tempArr =[]
-
+const qObj = {
+	1:{
+		type:'col',
+		ans:'prospecting'
+	},
+	5:{
+		type:'row',
+		ans:'elephant'
+	},
+	7:{
+		type:'row',
+		ans:'elepha'
+	}
+}
 //Loads the Crossword
 function initializeScreen(){
 	var puzzelTable = document.getElementById("puzzel");
@@ -15,21 +28,23 @@ function initializeScreen(){
 			var cell = row.insertCell(-1);
 			if(rowData[j] != 0){
 				var txtID = String('txt' + '_' + i + '_' + j);
-				cell.innerHTML = '<input type="text" class="inputBox" maxlength="1" style="text-transform: lowercase" ' + 'id="' + txtID + '" onfocus="textInputFocus(' + "'" + txtID + "'"+ ')">';
+				cell.innerHTML = '<input type="text" class="inputBox" maxlength="1" style="text-transform: uppercase" ' + 'id="' + txtID + '" readonly="readonly">';
 			}else{
 				cell.classList.add("mystyle")
 			}
 		}
 	}
 	addHint();
-    // document.getElementById("userAnswer").onclick = alert('hello')
+	
 	createActionButtons()
 
 	let submitBtn = document.getElementById('submit')
-	submitBtn.addEventListener('click',function() {
-	console.log('submit here')
-	submitAnswer(tempArr)
-})
+	submitBtn.addEventListener('click', function() {
+		console.log('submit here')
+		submitAnswer(tempArr)
+	})
+
+
 
 }
 //Adds the hint numbers
@@ -43,9 +58,9 @@ function addHint(){
 	document.getElementById("txt_2_4").placeholder = "7";
 }
 //Stores ID of the selected cell into currentTextInput
-function textInputFocus(txtID123){
-	currentTextInput = txtID123;
-}
+// function textInputFocus(txtID123){
+// 	currentTextInput = txtID123;
+// }
 //Returns Array
 function preparePuzzelArray(){
 return [
@@ -148,6 +163,7 @@ function submitAnswer([qNum,{type,ans}]){
   console.log('qNum here',qNum)
   let submittedAns = document.getElementById('userAnswer').value
   const ansArr = submittedAns.split('')
+  console.log('helloooo', ansArr)
   let index, start
   if(qNum===5){
    index = 5
@@ -157,6 +173,20 @@ function submitAnswer([qNum,{type,ans}]){
     index = 1
     start = 6
    }
+  if(submittedAns.length === ans.length){
+
+	if(submittedAns.toLowerCase()===ans.toLowerCase()){
+		document.getElementById('failMsg').style.visibility = 'hidden'
+		document.getElementById('failDesc').style.visibility = 'hidden'
+		document.getElementById('successMsg').style.visibility = 'visible'
+		document.getElementById('successDesc').style.visibility = 'visible'
+	}else{
+		document.getElementById('successMsg').style.visibility = 'hidden'
+		document.getElementById('successDesc').style.visibility = 'hidden'
+		document.getElementById('failMsg').style.visibility = 'visible'
+		document.getElementById('failDesc').style.visibility = 'visible'
+	}
+	// checkClicked()
   ansArr.forEach((v,i) => {
       if(type === 'row'){
       document.getElementById(`txt_${index}_${start+i}`).value = v
@@ -166,22 +196,12 @@ function submitAnswer([qNum,{type,ans}]){
         }
   });
   console.log(ansArr);
+  }else{
+	  alert('Please Enter proper length word')
+  }
 }
 
-const qObj = {
-	1:{
-		type:'col',
-		ans:'prospecting'
-	},
-	5:{
-		type:'row',
-		ans:'elephant'
-	},
-	7:{
-		type:'row',
-		ans:'elepha'
-	}
-}
+
 function createActionButtons(){
 	let actionBtn = document.getElementById('actionButton')
 	
@@ -213,6 +233,7 @@ function createActionButtons(){
 }
 
 function showInput(obj,qNum) {
+	console.log('show input')
 	tempArr.length = 0
 	let rightPanel =document.getElementById('rightPanel')
 	rightPanel.style.visibility = 'visible'
