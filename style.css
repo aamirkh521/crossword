@@ -1,0 +1,100 @@
+#container {
+    background: url('images/Neon.png');
+    width: auto;
+    min-height: 500px;
+    display: flex;
+    
+}
+#leftPanel
+{
+   position: relative;
+   float: left;
+}
+#leftPanel #gameLevel {
+    
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+     
+}
+#gameLevel h3{
+    position: absolute;
+    top: 0px;
+    text-align: center;
+    left: 40px;
+    color: #fff;
+}
+#leftPanel #gameScreen {
+    
+    position: absolute;
+    top: 50px;
+    left: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ 
+}
+.clue-text{
+    color: #19B4A9;
+    position: absolute;
+    bottom: 150px;
+    left: 40px;
+}
+ 
+#actionPanel{
+    color: #000000;
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    width: 100%;
+}
+.actionButton{
+    /* width: 35%; */
+    width: 45%;
+    float: left;
+}
+.actionButton span{
+    font-weight: bold;
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+}
+.actionGiveup{
+    float: left;
+    margin: 30px 50px;
+}
+
+#heading7{
+    position: absolute;
+   
+    font-weight: bold;
+}
+#rightPanel{
+    margin-top: 30px;
+    margin-left: 22px;
+}
+.inputForm{
+    background-color: #FFFFFF;
+    margin-top: 100px;
+    padding: 10px 20px;
+    width: 300px;
+}
+.inputForm .formLabel {
+    margin-top: -53px;
+    margin-left: -28px;
+}
+.inputForm p {
+    position: absolute;
+    top: 190px;
+    transform: rotate(349deg);
+    -webkit-transform: rotate(349deg);
+    font-weight: bold;
+}
+.formInput{
+    width: 100%;
+    height: 40px;
+}
+.formSubmit{
+    text-align: center;
+}
