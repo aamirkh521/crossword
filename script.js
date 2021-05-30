@@ -1,6 +1,9 @@
 //Globals
 var currentTextInput;
 var puzzelArrayData;
+var numberOfActionButtons = 7
+const tempArr =[]
+
 //Loads the Crossword
 function initializeScreen(){
 	var puzzelTable = document.getElementById("puzzel");
@@ -20,6 +23,13 @@ function initializeScreen(){
 	}
 	addHint();
     // document.getElementById("userAnswer").onclick = alert('hello')
+	createActionButtons()
+
+	let submitBtn = document.getElementById('submit')
+	submitBtn.addEventListener('click',function() {
+	console.log('submit here')
+	submitAnswer(tempArr)
+})
 
 }
 //Adds the hint numbers
@@ -134,10 +144,10 @@ function solveClicked(){
 	}
 }
 
-function submitAnswer(qNum, type){
-  console.log(qNum)
-  let ans = document.getElementById('userAnswer').value
-  const ansArr = ans.split('')
+function submitAnswer([qNum,{type,ans}]){
+  console.log('qNum here',qNum)
+  let submittedAns = document.getElementById('userAnswer').value
+  const ansArr = submittedAns.split('')
   let index, start
   if(qNum===5){
    index = 5
@@ -157,3 +167,57 @@ function submitAnswer(qNum, type){
   });
   console.log(ansArr);
 }
+
+const qObj = {
+	1:{
+		type:'col',
+		ans:'prospecting'
+	},
+	5:{
+		type:'row',
+		ans:'elephant'
+	},
+	7:{
+		type:'row',
+		ans:'elepha'
+	}
+}
+function createActionButtons(){
+	let actionBtn = document.getElementById('actionButton')
+	for(let k=1; k<=numberOfActionButtons; k++){
+		let img = document.createElement('img');
+		img.src = 'images/Group 272.png';
+		img.style.padding = "0px 10px 0px 0px";
+		img.style.position = 'relative'
+		actionBtn.appendChild(img);
+		
+		let heading = document.createElement('span')
+		heading.setAttribute('id',`heading${k}`)
+		heading.innerHTML=k
+		heading.style.fontWeight ='bold'
+		actionBtn.appendChild(heading)
+		
+		if(Object.prototype.hasOwnProperty.call(qObj, k)){
+			img.addEventListener('click', function(){
+				showInput(qObj[k], k);
+			});
+			heading.addEventListener('click', function(){
+				showInput(qObj[k], k);
+			});
+		}
+		
+	}
+}
+
+function showInput(obj,qNum) {
+	tempArr.length = 0
+	let rightPanel =document.getElementById('rightPanel')
+	rightPanel.style.visibility = 'visible'
+	tempArr.push(qNum,obj)
+	console.log(tempArr)
+}
+
+
+
+
+
