@@ -184,19 +184,22 @@ const qObj = {
 }
 function createActionButtons(){
 	let actionBtn = document.getElementById('actionButton')
+	
 	for(let k=1; k<=numberOfActionButtons; k++){
+		let actiondiv = document.createElement('div')
 		let img = document.createElement('img');
 		img.src = 'images/Group 272.png';
-		img.style.padding = "0px 10px 0px 0px";
-		img.style.position = 'relative'
-		actionBtn.appendChild(img);
+		actiondiv.style.padding = "0px 10px 0px 0px";
+		actiondiv.style.position = 'relative'
+		actiondiv.style.float = 'left'
+		actiondiv.appendChild(img);
 		
 		let heading = document.createElement('span')
 		heading.setAttribute('id',`heading${k}`)
 		heading.innerHTML=k
 		heading.style.fontWeight ='bold'
-		actionBtn.appendChild(heading)
-		
+		actiondiv.appendChild(heading)
+		actionBtn.appendChild(actiondiv);
 		if(Object.prototype.hasOwnProperty.call(qObj, k)){
 			img.addEventListener('click', function(){
 				showInput(qObj[k], k);
