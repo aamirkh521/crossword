@@ -315,6 +315,12 @@ function showInput(obj, qNum) {
 console.log(obj)
 console.log('ques no is', qNum);	
 const {type,ans} = obj
+
+const cells = document.querySelectorAll('.info-cell')
+cells.forEach(function(el) {
+	el.classList.remove('info-cell')
+	});
+
 const {index, start} = getIndexes(qNum);
 let ansArr = ans.split('')
 ansArr.forEach((v, i) => {
