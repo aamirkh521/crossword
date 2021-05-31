@@ -101,7 +101,7 @@
 #successMsg, #failMsg, #successDesc, #failDesc {
     display: none;
 }
-input:placeholder-shown {
+#userAnswer:placeholder-shown {
     font-style: italic;
  }
  .success {
@@ -111,4 +111,17 @@ input:placeholder-shown {
  .error{
      -webkit-box-shadow: 0 0 15px red;
         box-shadow: 0 0 10px red;
+ }
+
+ .info{
+    -webkit-box-shadow: 0 0 15px yellow;
+    box-shadow: 0 0 10px yellow;
+    border-radius: 100px;
+ }
+ .info-cell{
+    -webkit-box-shadow: 0 0 15px yellow;
+    box-shadow: 0 0 10px yellow;
+ }
+ .btn, .btn-text {
+     cursor: pointer;
  }

@@ -8,9 +8,25 @@ const qObj = {
     type: "col",
     ans: "prospecting",
   },
+  2: {
+    type: "col",
+    ans: "umbrella",
+  },
+  3: {
+    type: "col",
+    ans: "ball",
+  },
+  4: {
+    type: "col",
+    ans: "girl",
+  },
   5: {
     type: "row",
     ans: "elephant",
+  },
+  6: {
+    type: "row",
+    ans: "education",
   },
   7: {
     type: "row",
@@ -21,7 +37,7 @@ const qObj = {
 const indexObj = {
 	1 : {
 		index : 0,
-		start : 0
+		start : 0,
 	},
 	2 : {
 		index : 1,
@@ -265,6 +281,7 @@ function createActionButtons() {
     let actiondiv = document.createElement("div");
     let img = document.createElement("img");
     img.src = "images/Group 272.png";
+	img.classList.add('btn')
     actiondiv.style.padding = "0px 10px 0px 0px";
     actiondiv.style.position = "relative";
     actiondiv.style.float = "left";
@@ -272,25 +289,46 @@ function createActionButtons() {
 
     let heading = document.createElement("span");
     heading.setAttribute("id", `heading${k}`);
+	heading.classList.add('btn-text')
     heading.innerHTML = k;
     heading.style.fontWeight = "bold";
     actiondiv.appendChild(heading);
     actionBtn.appendChild(actiondiv);
     if (Object.prototype.hasOwnProperty.call(qObj, k)) {
       img.addEventListener("click", function () {
-        showInput(qObj[k], k);
+		removeInfoClass()
+		  this.classList.add('info')
+          showInput(qObj[k], k);
       });
       heading.addEventListener("click", function () {
-        showInput(qObj[k], k);
+		removeInfoClass()
+		  let elem = this.previousElementSibling
+		  elem.classList.add('info')
+		  console.log('elem here', elem)
+		 showInput(qObj[k], k);
       });
     }
   }
 }
 
 function showInput(obj, qNum) {
-  console.log("show input");
+console.log(obj)
+console.log('ques no is', qNum);	
+const {type,ans} = obj
+const {index, start} = getIndexes(qNum);
+let ansArr = ans.split('')
+ansArr.forEach((v, i) => {
+	if (type === "row") {
+	  document.getElementById(`txt_${index}_${start + i}`).classList.add('info-cell')
+	}
+	if (type === "col") {
+	  document.getElementById(`txt_${index + i}_${start}`).classList.add('info-cell')
+	}
+  });
+
   tempArr.length = 0;
   document.getElementById("userAnswer").value = ''
+  document.getElementById("quesNum").innerHTML = qNum
   let rightPanel = document.getElementById("rightPanel");
   rightPanel.style.visibility = "visible";
   tempArr.push(qNum, obj);
@@ -314,4 +352,11 @@ function onlyAlphabets(e) {
 	catch (err) {
 		alert(err.Description);
 	}
+}
+
+function removeInfoClass() {
+	let elements = document.querySelectorAll('.btn')
+	elements.forEach(function(el) {
+	el.classList.remove('info')
+	});
 }
