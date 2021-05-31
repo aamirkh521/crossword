@@ -94,8 +94,21 @@
 .formSubmit{
     text-align: center;
 }
+#submit{
+    padding-top: 82px;
+}
 
 #successMsg, #failMsg, #successDesc, #failDesc {
-    /* display: none; */
-    visibility: hidden;
+    display: none;
 }
+input:placeholder-shown {
+    font-style: italic;
+ }
+ .success {
+    -webkit-box-shadow: 0 0 15px green;
+        box-shadow: 0 0 10px green
+ }
+ .error{
+     -webkit-box-shadow: 0 0 15px red;
+        box-shadow: 0 0 10px red;
+ }
