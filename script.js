@@ -64,6 +64,8 @@ const indexObj = {
 		start : 4
 	}
 }
+let rightAnswer = 0
+let numberOfQues = 7
 
 function getIndexes(key) {
 	if(Object.prototype.hasOwnProperty.call(indexObj,key)){
@@ -217,7 +219,6 @@ function solveClicked() {
     // Done!
   }
 }
-
 function submitAnswer([qNum, { type, ans }]) {
   let submittedAns = document.getElementById("userAnswer").value;
   const ansArr = submittedAns.split("");
@@ -226,17 +227,21 @@ function submitAnswer([qNum, { type, ans }]) {
 
   if (submittedAns.length === ans.length) {
     if (submittedAns.toLowerCase() === ans.toLowerCase()) {
+		rightAnswer++
 		ansArr.forEach((v, i) => {
 			if (type === "row") {
 			  document.getElementById(`txt_${index}_${start + i}`).value = v;
 			  document.getElementById(`txt_${index}_${start + i}`).classList.remove('error')
+			  document.getElementById(`txt_${index}_${start + i}`).classList.remove('info-cell')
 			  document.getElementById(`txt_${index}_${start + i}`).classList.add('success')
 			}
 			if (type === "col") {
 			  document.getElementById(`txt_${index + i}_${start}`).value = v;
 			  document.getElementById(`txt_${index + i}_${start}`).classList.remove('error')
+			  document.getElementById(`txt_${index + i}_${start}`).classList.remove('info-cell')
 			  document.getElementById(`txt_${index + i}_${start}`).classList.add('success')
 			}
+			document.getElementById(`img${qNum}`).classList.add('success-btn')
 		  });
       document.getElementById("failMsg").style.display = "none";
       document.getElementById("failDesc").style.display = "none";
@@ -248,13 +253,16 @@ function submitAnswer([qNum, { type, ans }]) {
 			if (type === "row") {
 			  document.getElementById(`txt_${index}_${start + i}`).value = v;
 			  document.getElementById(`txt_${index}_${start + i}`).classList.remove('success')
+			  document.getElementById(`txt_${index}_${start + i}`).classList.remove('info-cell')
 			  document.getElementById(`txt_${index}_${start + i}`).classList.add('error')
 			}
 			if (type === "col") {
 			  document.getElementById(`txt_${index + i}_${start}`).value = v;
 			  document.getElementById(`txt_${index + i}_${start}`).classList.remove('success')
+			  document.getElementById(`txt_${index + i}_${start}`).classList.remove('info-cell')
 			  document.getElementById(`txt_${index + i}_${start}`).classList.add('error')
 			}
+			document.getElementById(`img${qNum}`).classList.add('error-btn')
 		  });
       document.getElementById("successMsg").style.display = "none";
       document.getElementById("successDesc").style.display = "none";
@@ -263,7 +271,9 @@ function submitAnswer([qNum, { type, ans }]) {
 	  
     }
     // checkClicked()
-   
+	if(rightAnswer === numberOfQues){
+		alert('success')
+	}
     console.log(ansArr);
   } else {
 	document.getElementById('successMsg').style.display = 'none'
@@ -280,8 +290,10 @@ function createActionButtons() {
   for (let k = 1; k <= numberOfActionButtons; k++) {
     let actiondiv = document.createElement("div");
     let img = document.createElement("img");
-    img.src = "images/Group 272.png";
+    img.src = "images/gameplay_screen/Group 272.png";
 	img.classList.add('btn')
+    img.setAttribute("id", `img${k}`);
+
     actiondiv.style.padding = "0px 10px 0px 0px";
     actiondiv.style.position = "relative";
     actiondiv.style.float = "left";
@@ -339,6 +351,11 @@ ansArr.forEach((v, i) => {
   rightPanel.style.visibility = "visible";
   tempArr.push(qNum, obj);
   console.log(tempArr);
+  document.getElementById("successMsg").style.display = "none";
+  document.getElementById("successDesc").style.display = "none";
+  document.getElementById("failMsg").style.display = "none";
+  document.getElementById("failDesc").style.display = "none";
+  
 }
 
 function onlyAlphabets(e) {
