@@ -1,10 +1,65 @@
 #container {
-    background: url('images/Neon.png');
+    background: url('images/gameplay_screen/Neon.png');
     width: auto;
     min-height: 500px;
     display: flex;
+    justify-content: center;
     
 }
+#homeContainer {
+    background: url('images/Splash/Splash\ –\ 6.png');
+    width: auto;
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    align-items: center;
+}
+.responsive{
+    max-width:100%;
+    max-height:100%;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .responsive1{
+    max-width:100%;
+    max-height:100%;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+ .center{
+   position: absolute;
+   top: 50%;
+   left: 50%; 
+   transform: translate(-50%, -50%);
+ }
+ 
+ .parent{
+   background: url('images/Splash/Splash\ –\ 6.png');
+   width: 100vw;
+   height: 100vh;
+   display: flex;
+   align-items: center;
+   justify-content:center;
+ }
+ .child{
+     height: 60vh;
+     width: 60vw;
+     
+ }
+.home_btn{
+    position: absolute
+ }
 #leftPanel
 {
    position: relative;
@@ -69,6 +124,9 @@
     margin-left: 22px;
     visibility: hidden;
 }
+.heading{
+    visibility: visible;
+}
 .inputForm{
     background-color: #FFFFFF;
     margin-top: 100px;
@@ -124,4 +182,15 @@
  }
  .btn, .btn-text {
      cursor: pointer;
+ }
+
+ .success-btn {
+    -webkit-box-shadow: 0 0 15px green;
+        box-shadow: 0 0 10px green;
+        border-radius: 100px;
+ }
+ .error-btn {
+    -webkit-box-shadow: 0 0 15px red;
+        box-shadow: 0 0 10px red;
+        border-radius: 100px;
  }
