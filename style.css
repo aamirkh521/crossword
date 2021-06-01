@@ -52,11 +52,7 @@
    align-items: center;
    justify-content:center;
  }
- .child{
-     height: 60vh;
-     width: 60vw;
-     
- }
+  
 .home_btn{
     position: absolute
  }

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<title>CROSSWORD-PUZZLE</title>
+<link rel="stylesheet" href="style.css">
+<style>
+    *{
+        margin: 0; padding: 0;
+        box-sizing: border-box;
+    }
+    .parent{
+        background-image: url('how-to-play/BACKGROUND.png');
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-position: center;
+    }
+    .title{
+        position: absolute;
+    top: 35px;
+    /* left: 300px; */
+    text-align: center;
+    width: 100%;
+    color: #5F259E;
+    }
+    .sub-title{
+        position: absolute;
+    top: 155px;
+    /* left: 300px; */
+    text-align: center;
+    width: 100%;
+    color: #9BDEDA;
+    }
+    .point{
+        position: absolute;
+    top: 200px;
+    left: 150px;
+    text-align: left;
+    width: 100%;
+   
+    }
+    .point li {
+        margin-bottom: 20px;
+    }
+    .close{
+        position: absolute;
+    bottom: 120px;
+    left: 300px;
+    text-align: center;
+   
+    }
+</style>
+<body>
+<div class="parent">
+    <div class="child" style="position: relative;">
+     <img src="how-to-play/Group 374.png" alt="" class="responsive1">
+     <h3 class="title">HOW TO PLAY</h3>
+     <h3 class="sub-title">INSTRUCTIONS TO PLAY CROSSBOARD</h3>
+        <ul class="point">
+            <li>Click to select across or down</li>
+            <li>Look at the puzzle clues and type in your answer. If it is right, 
+                the background will turn Green.
+            </li>
+            <li>Continue filling in the answer untill the puzzle is solved.</li>
+            <li>After completion of the puzzle click on SUBMIT</li>
+        </ul>
+        <img class="close" src="how-to-play/Group 286.png" />
+    </div>
+</div>
+</body>
+</html>
