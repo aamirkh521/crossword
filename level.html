@@ -3,39 +3,78 @@
 <title>CROSSWORD-PUZZLE</title>
 <link rel="stylesheet" href="style.css">
 <style>
-    *{
-        margin: 0; padding: 0;
+    * {
+        margin: 0;
+        padding: 0;
         box-sizing: border-box;
     }
-    .parent{
+
+    .levelContainer {
         background-image: url('how-to-play/Splash – 6.png');
         background-repeat: no-repeat;
         display: flex;
         background-position: center;
         height: 100%;
-         
+        flex-direction: column;
+
     }
-    .child{
+
+    .levelTitle {
         background-image: url('images/Menu/Group-371.png');
         background-repeat: no-repeat;
-        margin-top: 52px
-         
+        margin-top: 52px;
+        background-position: center;
+        padding-bottom: 20px;
+    }
+    .level{
+        float: left;
+        position: relative;
+    }
+    .levelDesc{
+        align-items: center;
+    justify-content: center;
+    display: flex;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
     }
 </style>
+
 <body>
-<div class="parent">
-    <div class="child">
+    <div class="levelContainer">
+        <div class="levelTitle">
 
-    
-    <img src="images/Menu/Group-188.png" style="padding : 40px;padding-bottom: 20px;"  alt="" class="responsive1">
-    <p style="text-align: center;">Click on any one of the crosswords to start the game</p>
 
-        <div class="level">
-            
+                <img src="images/Menu/Group-188.png" style="padding : 40px;padding-bottom: 20px;" alt=""
+                class="responsive1">
+            <p style="text-align: center;">Click on any one of the crosswords to start the game</p>
+
+
+
         </div>
 
+        <div class="levelDesc" style="text-align: center;">
+            <div class="level">
+                <img src="images/Menu/Group 382.png" />
+                <h3 style="position: absolute;bottom: 30px;-ms-transform: rotate(20deg);transform: rotate(356deg);left: 40px;">RISING STAR</h3>
+            </div>
+            <div class="level">
+                <img src="images/Menu/Group 382.png" />
+                <h3 style="position: absolute;bottom: 30px;-ms-transform: rotate(20deg);transform: rotate(356deg);left: 40px;">ACHIVER</h3>
+            </div>
+            <div class="level">
+                <img src="images/Menu/Group 382.png" />
+                <h3 style="position: absolute;bottom: 30px;-ms-transform: rotate(20deg);transform: rotate(356deg);left: 40px;">PROFICIENT</h3>
+            
+            </div>
+            <div class="level">
+                <img src="images/Menu/Group 382.png" />
+                <h3 style="position: absolute;bottom: 30px;-ms-transform: rotate(20deg);transform: rotate(356deg);left: 40px;">CHAMPION</h3>
+            
+            </div>
+        </div>
+    </div>
 
-</div>
-</div>
 </body>
+
 </html>
