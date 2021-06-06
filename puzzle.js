@@ -10,42 +10,52 @@ if(flag === 'rising'){
   1: {
     type: "col",
     ans: "ARMATORILOR",
+    ques: 'Asigurarea navelor oferă protecție_____.'
   },
   2: {
     type: "col",
     ans: "CIVIL",
+    ques: 'Conform Codului_____, asiguratul trebuie să aibă uninteres în legătură cubunul asigurat.'
   },
   3: {
     type: "row",
     ans: "ADECVARE",
+    ques: 'Totalitatea calităților și atributelor pe baza cărora o persoană este considerată a avea o bună reputație și care are, în mod individual și, după caz, în mod colectiv, împreună cu alte persoane, cunoștințe, competențe și experiență se numește_____.'
   },
   4: {
     type: "row",
     ans: "FRANSIZA",
+    ques: 'Partea din daună care rămâne în sarcina asiguratului.'
   },
   5: {
     type: "col",
     ans: "CONTRACTANT",
+    ques: 'Persoana care încheie contractul de asigurare, obligându-se față de asigurător să plătească prima de asigurare.'
   },
   6: {
     type: "col",
     ans: "STRATIFICAREA",
+    ques: 'Etapa în care sursele financiare sunt mutate dintr-o activitate în alta sau dintr-un cont în altul cu scopul de a ascunde sursa originală a fondurilor și de a da o aparență legală surselor financiare și fondurilor, din perspectiva combaterii spălării banilor.'
   },
   7: {
     type: "col",
     ans: "VIATA",
+    ques: 'Distribuitorii de asigurări au obligația de a asigura clientului un acces facil la raportul anual privind solvabilitatea și stabilitatea financiară a asigurătorului unui produs de asigurare de _____.'
   },
   8: {
     type: "row",
     ans: "ASIGURATORILOR",
+    ques: 'Intermediarii secundari acţionează sub răspunderea _____.'
   },
   9: {
     type: "row",
     ans: "AMBULATORII",
+    ques: 'Servicii stomatologice, servicii de imagistică, medicină de recuperare pot fi acoperite prin intermediul asigurării de sănătate, categoria de servicii _____.'
   },
   10: {
     type: "row",
     ans: "DESPAGUBIREA",
+    ques: '_____ reprezintă suma de bani pe care asigurătorul o datorează asiguratului/beneficiarului asigurării în cazul producerii riscului/evenimentului asigurat.'
   },
 }
 
@@ -88,7 +98,7 @@ if(flag === 'rising'){
 	},
   10: {
 		index : 17,
-		start : 6
+		start : 5
 	}
 }
 }
@@ -97,42 +107,52 @@ else if(flag === 'achiever'){
     1: {
       type: "col",
       ans: "INTERNA",
+      ques: 'Frauda _____se referă la fraudarea asigurătorului de către un membru al conducerii, manager sau angajat, și poate consta în utilizarea incorectă a datelor pentru frauda pe identitate și asumarea de identități false, acordarea contractelor furnizorilor fără licitație, falsificarea semnăturilor.'
     },
     2: {
       type: "col",
       ans: "CONSULTANTA",
+      ques: '_____ înseamnă recomandarea personalizată, adaptată nevoilor și cerințelor clientului, în legătură cu unul sau mai multe contracte de asigurare.'
     },
     3: {
       type: "col",
       ans: "CONSUMATORII",
+      ques: '_____ au dreptul de a fi informați complet, corect și precis asupra caracteristicilor esențiale ale produselor și serviciilor de asigurare.'
     },
     4: {
       type: "row",
       ans: "TERORISM",
+      ques: 'Ansamblul de acțiuni și/sau amenințări care prezintă pericol public și afectează securitatea națională reprezintă actul de _____.'
     },
     5: {
       type: "col",
       ans: "INTEGRITATEA",
+      ques: '_____ reprezintă elementul definitoriu care presupune a fi informat și a acționa permanent în litera și spiritul legii.'
     },
     6: {
       type: "col",
       ans: "BENEFICIARUL",
+      ques: 'Cine este îndreptățit să încaseze despăgubirea sau suma asigurată prevăzută în contractul de asigurare?'
     },
     7: {
       type: "col",
       ans: "TRANSPARENTA",
+      ques: '_____ reprezintă un dialog deschis și constructiv, cu toate părțile interesate, dialog bazat pe respect și profesionalism.'
     },
     8: {
       type: "col",
       ans: "SUBIECTIVE",
+      ques: 'Riscul de malpraxis intră în categoria riscurilor_____.'
     },
     9: {
       type: "row",
       ans: "FRAUDAIINTENTIONATA",
+      ques: '_____   este atunci când asiguratul ascunde informații în mod deliberat sau oferă informații incorecte despre trecutul lui sau istoricul daunelor.'
     },
     10: {
       type: "row",
       ans: "ANUITATE",
+      ques: 'O serie de plați regulate, la un anumit interval de timp, efectuate de societatea de asigurare, pe o anumită perioadă determinată sau pe intreaga viață a asiguratului.'
     },
   }
   
@@ -184,42 +204,52 @@ else if(flag === 'proficient'){
     1: {
       type: "col",
       ans: "ANUITATI",
+      ques: 'Cum se numesc asigurările de viață în care beneficiile sunt plătite eșalonat, atâta timp cât asiguratul este în viață (de obicei)?'
     },
     2: {
       type: "col",
       ans: "RISCURILEDINAMICE",
+      ques: 'La ce tip de riscuri probabilitatea de producere se modifică în timp?'
     },
     3: {
       type: "row",
       ans: "INDEMNIZATIA",
+      ques: '_____ de asigurare este suma de bani plătită de asigurător la apariția evenimentului asigurat și care este stipulată expres în clauzele contractuale.'
     },
     4: {
       type: "row",
       ans: "CASCO",
+      ques: 'Ce tip de asigurare auto acoperă pagubele produse vehiculului ca urmare a operațiunii de descarcerare?'
     },
     5: {
       type: "col",
       ans: "FLEXA",
+      ques: 'Poliță de asigurare standard ce cuprinde următoarele riscuri asigurate: incendiu, trăsnet, explozie, căderi de corpuri aeriene.'
     },
     6: {
       type: "row",
       ans: "COLECTIV",
+      ques: 'Asigurarea de accidente se poate încheia Individual sau _____ .'
     },
     7: {
       type: "col",
       ans: "AGRICOLE",
+      ques: 'Culturile de cereale, plante oleaginoase, leguminoase fac obiectul asigurării  _____.'
     },
     8: {
       type: "row",
       ans: "FIDELITATE",
+      ques: 'Tipul de asigurare de risc financiar prin care asigurătorul oferă protecție unei companii, în calitate de asigurat împotriva unor prejudicii aduse activelor sale, ca urmare a actelor necinstite sau frauduloase ale personalului este asigurarea de _____.'
     },
     9: {
       type: "row",
       ans: "ANIMALE",
+      ques: 'Intoxicația subită cu ierburi sau atacul animalelor sălbatice, precum și bolile reprezintă riscuri acoperite prin asigurarea de _____.'
     },
     10: {
       type: "row",
       ans: "CAUTIUNE",
+      ques: 'Garanțiile pentru participarea la licitații reprezintă una dintre cele mai des întâlnite asigurări de _____.'
     },
   }
   
@@ -271,42 +301,52 @@ else if(flag === 'champion'){
     1: {
       type: "col",
       ans: "ANGAJATORUL",
+      ques: 'Cine poate fi contractantul unei asigurări de sănătate de grup?'
     },
     2: {
       type: "row",
       ans: "TREI",
+      ques: 'Calitatea de distribuitor de asigurări și/sau reasigurări se menține: prin îndeplinirea cumulativă a condițiilor privind acumularea anuală a 20 de credite, în termenul legal prevăzut, și absolvirea, la perioade succesive de _____ ani, fără depășirea valabilității certificatului deținut, a examenului de pregătire profesională continuă.'
     },
     3: {
       type: "col",
       ans: "INSPECTIE",
+      ques: 'Principalul obiectiv în evaluarea riscului în vederea stabilirii condițiilor de preluare în asigurare se numește _____  de risc.'
     },
     4: {
       type: "row",
       ans: "PAD",
+      ques: 'Riscurile acoperite prin polița obligatorie _____  sunt: cutremur, inundații naturale, alunecarea de teren.'
     },
     5: {
       type: "col",
       ans: "GRUP",
+      ques: 'În funcție de numărul persoanelor cuprinse în asigurare, asigurările de viață pot fi: individuale și de _____.'
     },
     6: {
       type: "row",
       ans: "ASIGURATOR",
+      ques: 'În cazul asigurării facultative CASCO, subscrierea contractului de asigurare este realizată de către_____.'
     },
     7: {
       type: "col",
       ans: "KID",
+      ques: 'Alerta de inteligibilitate "Sunteți pe cale să achiziționați un produs care nu este simplu și poate fi dificil de înțeles" este inclusă în documentul de informare numit_____.'
     },
     8: {
       type: "row",
       ans: "MANDAT",
+      ques: 'Contractul de distribuţie în asigurări este un contract de _____ .'
     },
     9: {
       type: "col",
       ans: "CMR",
+      ques: 'Asigurarea de răspundere a transportatorului pentru marfa transportată în calitate de cărăuș în trafic rutier.'
     },
     10: {
       type: "row",
       ans: "OPERATOR",
+      ques: 'Persoana fizică sau juridică care, singură sau împreună cu alții, stabilește scopurile și mijloacele de prelucrare a datelor cu caracter personal se numește _____ .'
     },
   }
   
@@ -388,7 +428,6 @@ function initializeScreen() {
 
   let submitBtn = document.getElementById("submit");
   submitBtn.addEventListener("click", function () {
-    console.log("submit here");
     submitAnswer(tempArr);
   });
 }
@@ -404,7 +443,7 @@ function addHint() {
   document.getElementById("txt_8_2").placeholder = "7";
   document.getElementById("txt_9_0").placeholder = "8";
   document.getElementById("txt_13_9").placeholder = "9";
-  document.getElementById("txt_17_6").placeholder = "10";
+  document.getElementById("txt_17_5").placeholder = "10";
   }
   if(flag === 'achiever'){
     document.getElementById("txt_1_7").placeholder = "1";
@@ -676,9 +715,8 @@ function submitAnswer([qNum, { type, ans }]) {
     }
     // checkClicked()
 	if(rightAnswer === numberOfQues){
-		alert('success')
+		window.location.href = 'success.html'
 	}
-    console.log(ansArr);
   } else {
 	document.getElementById('successMsg').style.display = 'none'
 	document.getElementById('successDesc').style.display = 'none'
@@ -720,7 +758,6 @@ function createActionButtons() {
 		removeInfoClass()
 		  let elem = this.previousElementSibling
 		  elem.classList.add('info')
-		  console.log('elem here', elem)
 		 showInput(qObj[k], k);
       });
     }
@@ -728,9 +765,7 @@ function createActionButtons() {
 }
 
 function showInput(obj, qNum) {
-console.log(obj)
-console.log('ques no is', qNum);	
-const {type,ans} = obj
+const {type,ans,ques} = obj
 
 const cells = document.querySelectorAll('.info-cell')
 cells.forEach(function(el) {
@@ -751,10 +786,11 @@ ansArr.forEach((v, i) => {
   tempArr.length = 0;
   document.getElementById("userAnswer").value = ''
   document.getElementById("quesNum").innerHTML = qNum
+  document.getElementsByClassName('question')[0].innerHTML = ques + "\n"
+  document.getElementsByClassName('question')[0].style.textAlign = "justify";
   let rightPanel = document.getElementById("rightPanel");
   rightPanel.style.visibility = "visible";
   tempArr.push(qNum, obj);
-  console.log(tempArr);
   document.getElementById("successMsg").style.display = "none";
   document.getElementById("successDesc").style.display = "none";
   document.getElementById("failMsg").style.display = "none";
