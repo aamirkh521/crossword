@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<title>CROSSWORD-PUZZLE</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="puzzle.css">
+<script src="puzzle.js"></script>
+<body onload="initializeScreen()">
+<div id="container">
+    <div id="leftPanel">
+        <img src="images/gameplay_screen/Mask-Group-2.png" />
+         <div id="gameLevel">
+            <img src="images/gameplay_screen/Group-284.png" />
+            <h3>RISING STAR</h3>
+         </div>
+         <div id="gameScreen">
+            <img src="images/gameplay_screen/Path 160.png" />
+            <div id="leftBox">
+            <table id="puzzel">
+
+            </table>
+        </div>
+         </div>
+         <p class="clue-text">Click on the number to reveal the clues</p>
+         <div id="actionPanel">
+            <div class="actionButton" id="actionButton">
+          
+        </div>
+        <div class="actionGiveup">
+            <img src="images/gameplay_screen/Group 286.png" />
+        </div>
+         </div>
+    </div>
+    <div id="rightPanel">
+       <div class="heading">
+           <img src="images/gameplay_screen/group_374.png" />
+       </div>
+       <div class="inputForm">
+         <img class="formLabel" src="images/gameplay_screen/Group 265.png" />
+         <p><span id="quesNum"></span>- DOWN</p>
+         <div class="question">Art of sharing something among a number of recipients.</div>
+         <div class="answer"> 
+             <input type="text" class="formInput" id="userAnswer" placeholder="Type your answer here..." onkeypress="return onlyAlphabets(event,this);">
+       </div>
+       <div class="formResponse">
+            <h2 class="successText" style="color: #9ECB43;" id="successMsg">That's Correct!</h2>
+            <h2 class="failText" style="color: #DB0859;" id="failMsg">That's Incorrect!</h2>
+            <div class="successDesc" style="color: #60CBC4;" id="successDesc">
+            Click on any other number to continue.
+        </div>
+            <div class="failDesc" style="color: #9ECB43;" id="failDesc">
+            Click on "Try again" or any other number to continue
+            </div>
+       </div>
+       <div class="formSubmit">
+        <img src="images/gameplay_screen/Group-287.png" id="submit"/>
+       </div>
+         
+    </div>
+    </div>
+</div>
+</body>
+</html>
