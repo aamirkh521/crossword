@@ -229,6 +229,10 @@ hr.new {
   height: 350px;
 }
 
+.cursor {
+    cursor: pointer;
+}
+
 /***************************** Media Queries *************************************/
 
 @media only screen and (min-device-width: 300px) and (max-device-width: 767px) and (orientation : portrait) {
@@ -302,12 +306,14 @@ hr.new {
         justify-content: center;
         display: flex;
       }
+      .child-row {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
   .img-props {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    padding-bottom: 55px;
-    padding-top: 145px;
     
   }
 #main {
