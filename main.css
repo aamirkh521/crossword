@@ -1,0 +1,515 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: url("images/Splash/Splash\ –\ 6.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+#main {
+content: url('images/Splash/Group 158.png');
+}
+#start_btn {
+    content: url('images/Splash/Group 157.png');
+}
+#how_to_play_btn {
+    content: url('images/Splash/Group 156.png');
+}
+
+.img-props {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.img-howtoplay {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.row {
+  display: block;
+  text-align: center;
+}
+
+.levelContainer {
+  background-image: url("images/Menu/Group-371.png");
+  background-repeat: no-repeat;
+  margin-top: 52px;
+  background-position: center;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+.levelsubContainer {
+  background-image: url("images/Menu/Group-188.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-top: 35px;
+}
+
+.p-title {
+  text-align: center;
+  padding-top: 50px;
+  color: #b9e8e5;
+}
+
+.level {
+  float: left;
+  position: relative;
+}
+
+.levelDesc {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  text-align: center;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  flex-direction: row;
+}
+
+.img-caption {
+  position: absolute;
+  bottom: 30px;
+  -ms-transform: rotate(20deg);
+  transform: rotate(366deg);
+  left: 40px;
+  color: #da0155;
+}
+
+.playcontainer {
+  background-image: url("images/howtoplay/Group374.png");
+  background-repeat: no-repeat;
+  margin-top: 52px;
+  background-position: center;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+.htitle {
+  position: absolute;
+  position: absolute;
+  top: 30px;
+  text-align: center;
+  width: 100%;
+  color: #5f259e;
+}
+
+.sub-title {
+  position: absolute;
+  top: 120px;
+  text-align: center;
+  width: 100%;
+  color: #00aca0;
+}
+
+hr.new {
+  border-top: 2px dashed #f2f2f2;
+  position: absolute;
+  top: 175px;
+  right: 0;
+  left: 310px;
+  width: 50%;
+}
+
+.point {
+  position: absolute;
+  top: 220px;
+  left: 300px;
+  text-align: left;
+  width: 100%;
+  font-size: 16px;
+}
+
+.point li {
+  margin-bottom: 15px;
+  overflow-wrap: break-word;
+}
+
+.close {
+  position: absolute;
+  top: 375px;
+  bottom: 0;
+  text-align: center;
+  width: fit-content;
+  left: 545px;
+}
+
+.alert-msg {
+  background-image: url("images/Giveuppopup/Group_160.png");
+  background-repeat: no-repeat;
+  margin-top: 52px;
+  background-position: center;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  background-size: 50vw 50vh;
+  position: relative;
+}
+
+.heading-props {
+  position: absolute;
+  color: maroon;
+  margin-top: 100px;
+}
+
+.subheading-props {
+  text-align: center;
+  padding-top: 20px;
+  font-size: smaller;
+}
+
+.img-props {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.lose-alert {
+  background-image: url("images/Feedback_popups/Group\ 376.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.lose-popup {
+  background-image: url("images/Feedback_popups/Path\ 12002.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100vw;
+  height: 70vh;
+}
+
+.lose-msg {
+  background-image: url("images/Feedback_popups/Group\ 377.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100vw;
+  height: 70vh;
+}
+
+.lose-text {
+  background-image: url("images/Feedback_popups/lose.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 600px;
+  height: 350px;
+}
+
+.win-alert {
+  background-image: url("images/Feedback_popups/Group\ 379.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.win-msg {
+  background-image: url("images/Feedback_popups/Group\ 377.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100vw;
+  height: 60vh;
+}
+
+.win-text {
+  background-image: url("images/Feedback_popups/you_win.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 600px;
+  height: 350px;
+}
+
+/***************************** Media Queries *************************************/
+
+@media only screen and (min-device-width: 300px) and (max-device-width: 767px) and (orientation : portrait) {
+    body {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        background: url("images/mobile/Potrait\ view/splash/Mask\ Group\ 2.png");
+    }
+    .row {
+        /* text-align: center; */
+        align-items: center;
+        justify-content: center;
+      }
+  .img-props {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 55px;
+    padding-top: 145px;
+    
+  }
+#main {
+    content: url('images/mobile/Potrait\ view/splash/group_365.png');
+    }
+#start_btn {
+        content: url('images/mobile/Potrait\ view/splash/Group157.png');
+        display: block;
+        margin: auto;
+        padding-bottom: 30px;
+    }
+#how_to_play_btn {
+        content: url('images/mobile/Potrait\ view/splash/Group156.png');
+    }
+  .span-heading {
+    display: block;
+    width: 40%;
+    height: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 40px;
+    flex-direction: row;
+  }
+
+  .levelContainer {
+    background-size: 70%;
+  }
+
+  .levelsubContainer {
+    background-size: 50%;
+  }
+
+  .p-title {
+    text-align: center;
+    padding-top: 35px;
+    color: #b9e8e5;
+    overflow-wrap: break-word;
+    padding-bottom: 20px;
+    font-size: 12px;
+  }
+}
+
+@media only screen and (min-device-width: 300px) and (max-device-width: 767px) and (orientation : landscape) {
+    body {
+        display: flex;
+        flex-direction: row;
+        background: url("images/mobile/Landscape\ view/splash_14/Mask\ Group\ 2.png");
+    }
+    .row {
+        align-items: center;
+        justify-content: center;
+        display: flex;
+      }
+  .img-props {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 55px;
+    padding-top: 145px;
+    
+  }
+#main {
+    content: url('images/mobile/Potrait\ view/splash/group_365.png');
+    }
+#start_btn {
+        content: url('images/mobile/Potrait\ view/splash/Group157.png');
+        display: inline-flex;
+    }
+#how_to_play_btn {
+        content: url('images/mobile/Potrait\ view/splash/Group156.png');
+    }
+  .span-heading {
+    display: block;
+    width: 40%;
+    height: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 40px;
+    flex-direction: row;
+  }
+
+  .levelContainer {
+    background-size: 70%;
+  }
+
+  .levelsubContainer {
+    background-size: 50%;
+  }
+
+  .p-title {
+    text-align: center;
+    padding-top: 35px;
+    color: #b9e8e5;
+    overflow-wrap: break-word;
+    padding-bottom: 20px;
+    font-size: 12px;
+  }
+}
+/* @media only screen and (min-device-width : 768px) and (max-device-width : 1023px) and (orientation : landscape){
+    body {
+      flex-direction: row;
+      
+    }
+    .img-props{
+            
+        width:50%;
+        height:50%;
+        display: inline-block;
+        margin-left: auto;
+        margin-right: auto;
+        flex-direction: row;
+               
+        }
+        .span-heading{
+
+            display: block;
+            width:50%;
+            height:50%;
+            margin-left: auto;
+            margin-right: auto;
+            padding-top:40px;
+            flex-direction: row;
+    
+    }    
+    .row{
+        display:flex;
+        align-items: center;
+        justify-items: center;
+    }
+
+    .levelContainer{
+        background-size: 70%;
+    }
+    .levelsubContainer{
+        background-size: 50%;
+    }
+    .p-title {
+        text-align: center;
+        padding-top: 37px;
+        color: #b9e8e5;
+        overflow-wrap: break-word;
+        font-size: 20px;
+        margin-top: 50px;
+    }
+
+    .level {
+        float: left;
+        position: relative;
+        margin-left: 40px;
+    }  
+
+    .img-howtoplay{
+        width:100%;
+        height:100%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 150px;
+        padding-left: 150px;
+
+   }  
+   .htitle {
+    position: absolute;
+    position: absolute;
+    top: 176px;
+    text-align: center;
+    width: 100%;
+    color: #5f259e;
+    left: 69px;
+}
+.sub-title {
+    position: absolute;
+    top: 260px;
+    text-align: center;
+    width: 100%;
+    color: #00aca0;
+    left: 100px;
+}
+.point {
+    position: absolute;
+    top: 314px;
+    left: 300px;
+    text-align: left;
+    width: 100%;
+    font-size: 16px;
+}
+.close {
+    position: absolute;
+    top: 472px;
+    bottom: 0;
+    text-align: center;
+    width: fit-content;
+    left: 545px;
+}
+  } */
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1023px) and (orientation: portrait) {
+  body {
+    flex-direction: column;
+    background: url('images/tablet/1/Mask\ Group\ 2.png')
+  }
+
+  .img-props {
+    width: 50%;
+    height: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 55px;
+    padding-top: 145px;
+    
+  }
+#main {
+    content: url('images/tablet/1/Group\ 365.png');
+    }
+#start_btn {
+        content: url('images/tablet/1/Group\ 157.png');
+        display: block;
+        margin: auto;
+        padding-bottom: 30px;
+    }
+#how_to_play_btn {
+        content: url('images/tablet/1/Group\ 154.png');
+    }
+  .span-heading {
+    display: block;
+    width: 50%;
+    height: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 40px;
+  }
+
+  .levelContainer {
+    background-size: 60%;
+  }
+
+  .levelsubContainer {
+    background-size: 40%;
+  }
+
+  .p-title {
+    text-align: center;
+    padding-top: 50px;
+    color: #b9e8e5;
+    overflow-wrap: break-word;
+    padding-bottom: 20px;
+  }
+
+  .level {
+    float: left;
+    position: relative;
+    margin-left: 40px;
+  }
+
+  .img-howtoplay {
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 150px;
+  }
+}
