@@ -21,9 +21,10 @@ td{
 	width: 20px;
 }
 #leftBox{
-	 
 	position: absolute;
     top: 20px;
+    right: 0rem;
+    left: 0rem;
 }
 #rightBox{
 	float: left;
@@ -33,16 +34,18 @@ td{
 	height:50px;
 	width: 107px;
 }
-#puzzel{
-	text-align: center;
-	margin: 0;
-	padding: 0;
-	border-collapse: collapse;
-	 
+#puzzel {
+text-align: center;
+    margin: -0.5rem 0rem;
+    padding: 46px;
+    border-collapse: collapse;
+    background-color: #eee;
+    position: relative;
 }
+
 .inputBox{
-		width: 20px;
-		height:20px;
+		width: 17px;
+		height:17px;
 		/* border: 1px solid black; */
 		text-align: center;
 }
