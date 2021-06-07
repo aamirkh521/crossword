@@ -103,6 +103,7 @@ if(flag === 'rising'){
 }
 }
 else if(flag === 'achiever'){
+
   qObj = {
     1: {
       type: "col",
@@ -403,6 +404,18 @@ function getIndexes(key) {
   }
 //Loads the Crossword
 function initializeScreen() {
+	if(flag ==='rising'){
+  document.getElementById('game_level').innerHTML = 'RISING STAR'
+	}
+	if(flag === 'achiever'){
+				document.getElementById('game_level').innerHTML = 'ACHIEVER'
+	}
+	if(flag === 'proficient'){
+				document.getElementById('game_level').innerHTML = 'PROFICIENT'
+	}
+	if(flag === 'champion'){
+				document.getElementById('game_level').innerHTML = 'CHAMPION'
+	}
   var puzzelTable = document.getElementById("puzzel");
   puzzelArrayData = preparePuzzelArray();
   for (var i = 0; i < puzzelArrayData.length; i++) {
@@ -692,6 +705,7 @@ function submitAnswer([qNum, { type, ans }]) {
       document.getElementById("successDesc").style.display = "block";
 	  
     } else {
+		rightAnswer--
 	    ansArr.forEach((v, i) => {
 			if (type === "row") {
 			  document.getElementById(`txt_${index}_${start + i}`).value = v;
@@ -714,8 +728,9 @@ function submitAnswer([qNum, { type, ans }]) {
 	  
     }
     // checkClicked()
+    console.log('right ans--', rightAnswer, numberOfQues)
 	if(rightAnswer === numberOfQues){
-		window.location.href = 'success.html'
+		window.location.href = 'win.html'
 	}
   } else {
 	document.getElementById('successMsg').style.display = 'none'
